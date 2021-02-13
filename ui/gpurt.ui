@@ -1,0 +1,192 @@
+<ui version="4.0" >
+ <class>gpurtClass</class>
+ <widget class="QMainWindow" name="gpurtClass" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>512</width>
+    <height>552</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>MultiLayer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget" />
+  <widget class="QMenuBar" name="menuBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>512</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLayer" >
+    <property name="title" >
+     <string>Tools</string>
+    </property>
+    <addaction name="actionComputeBoundingBox" />
+    <addaction name="separator" />
+    <addaction name="actionDeleteLayers" />
+    <addaction name="actionGenerateLayers" />
+    <addaction name="separator" />
+    <addaction name="actionDilateNormals" />
+   </widget>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad" />
+    <addaction name="actionLoadLayers" />
+    <addaction name="separator" />
+    <addaction name="actionLoadSphereScene" />
+    <addaction name="separator" />
+    <addaction name="actionExit" />
+   </widget>
+   <widget class="QMenu" name="menuRender" >
+    <property name="title" >
+     <string>Render</string>
+    </property>
+    <addaction name="actionResize" />
+    <addaction name="separator" />
+    <addaction name="actionIdle" />
+    <addaction name="separator" />
+    <addaction name="actionGeometry" />
+    <addaction name="actionBoundingBox" />
+    <addaction name="actionHeightmap" />
+    <addaction name="separator" />
+    <addaction name="actionPostShading" />
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuRender" />
+   <addaction name="menuLayer" />
+  </widget>
+  <widget class="QToolBar" name="mainToolBar" >
+   <property name="orientation" >
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar" />
+  <action name="actionLoad" >
+   <property name="text" >
+    <string>Load model...</string>
+   </property>
+  </action>
+  <action name="actionExit" >
+   <property name="text" >
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionGenerateLayers" >
+   <property name="text" >
+    <string>Generate layers...</string>
+   </property>
+  </action>
+  <action name="actionComputeBoundingBox" >
+   <property name="text" >
+    <string>Compute bounding box...</string>
+   </property>
+  </action>
+  <action name="actionIdle" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>false</bool>
+   </property>
+   <property name="text" >
+    <string>Idle Callback</string>
+   </property>
+  </action>
+  <action name="actionBoundingBox" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="enabled" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Bounding Box</string>
+   </property>
+  </action>
+  <action name="actionGeometry" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Geometry</string>
+   </property>
+  </action>
+  <action name="actionHeightmap" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Heightmap</string>
+   </property>
+  </action>
+  <action name="actionLoadLayers" >
+   <property name="checkable" >
+    <bool>false</bool>
+   </property>
+   <property name="text" >
+    <string>Load layers...</string>
+   </property>
+  </action>
+  <action name="actionDeleteLayers" >
+   <property name="text" >
+    <string>Delete all layers</string>
+   </property>
+  </action>
+  <action name="actionDilateNormals" >
+   <property name="text" >
+    <string>Dilate normals...</string>
+   </property>
+  </action>
+  <action name="actionResize" >
+   <property name="text" >
+    <string>Resize</string>
+   </property>
+  </action>
+  <action name="actionLoadSphereScene" >
+   <property name="text" >
+    <string>Load sphere scene</string>
+   </property>
+  </action>
+  <action name="actionPostShading" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Post Shading</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>gpurtClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>259</x>
+     <y>285</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
